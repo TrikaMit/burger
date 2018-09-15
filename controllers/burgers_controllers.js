@@ -14,11 +14,21 @@ router.get("/", function(req, res) {
   });
 });
 
+router.get("/api/burgers", function(req, res) {
+  burger.all(function(data) {
+    var hbsObject = {
+      burgers: data
+    };
+    console.log(hbsObject);
+    res.json(hbsObject);
+  });
+});
+
 router.post("/api/burgers", function(req, res) {
   burger.create([
-    "name", "burgah"
+    "name", "devoured"
   ], [
-    req.body.name, req.body.sleepy
+    req.body.name, req.body.devoured
   ], function(result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
