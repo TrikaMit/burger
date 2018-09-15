@@ -1,5 +1,10 @@
-<div class="container">
-<h1 class="display-1">Burgers!</h1>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-1">Burgers!</h1>
+    <p class="lead">Have your burger and eat it too!</p>
+  </div>
+</div>
+
 <br>
 <div class="container">
   
@@ -7,6 +12,7 @@
   <div class="row">
     <div class="col">
       <h2>Burgers you haven't eaten!</h2>
+      <hr>
 
       <ul>
         {{#each burgers}}
@@ -19,6 +25,7 @@
     </div>
     <div class="col">
       <h2>Burgers you have eaten!</h2>
+      <hr>
 
       <ul>
         {{#each burgers}}
@@ -31,6 +38,8 @@
   </div>
 
 </div>
+<br>
+<hr>
 
 <h2>Add a Burger</h2>
 <form class="create-form">
@@ -40,9 +49,6 @@
     <input type="text" id="burger" name="name">
   </div>
 
-
-<br>
-<hr>
   <div class="form-group">
     <label for="burger">Eaten?</label><br>
     <input type="radio" name="devoured" value="1" checked> Eaten!<br>
@@ -52,6 +58,5 @@
 
   <button type="submit">Add Burger</button>
 </form>
-
-</div>
+<br>
 </div>
