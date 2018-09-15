@@ -27,13 +27,13 @@ function objToSql(ob) {
 var orm = {
   all: function(tableInput, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
-    // connection.query(queryString, function(err, result) {
-    //   if (err) {
-    //     console.log(err);
-    //     throw err;
-    //   }
-    //   cb(result);
-    // });
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        console.log(err);
+        throw err;
+      }
+      cb(result);
+    });
   },
   create: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
